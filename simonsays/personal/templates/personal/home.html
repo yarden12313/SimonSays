@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Dushi Says</title>
     <style type="text/css">
         .top_left_circle{
             height: 100px;
@@ -12,6 +12,7 @@
             border-top-right-radius: 0;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+            margin:0;
             }
         .top_right_circle{
             height: 100px;
@@ -21,6 +22,7 @@
             border-top-right-radius: 100%;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+            margin:0;
             }
         .bottom_left_circle{
             height: 100px;
@@ -30,6 +32,7 @@
             border-top-right-radius: 0;
             border-bottom-left-radius: 100%;
             border-bottom-right-radius: 0;
+            margin:0;
             }
         .bottom_right_circle{
             height: 100px;
@@ -39,17 +42,27 @@
             border-top-right-radius: 0;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 100%;
+            margin:0;
             }
+        .circle{
+            display: inline-block;
+            margin:0;
+            padding: 0px 0px 0px 0px;
+        }
     </style>
 </head>
 <body>
 {% extends "personal/header.html" %}
 {% block content %}
 <center>
-    <div class="top_left_circle"></div>
-    <div class="bottom_left_circle"></div>
-    <div class="top_right_circle"></div>
-    <div class="bottom_right_circle"></div>
+    <div class="circle">
+        <div class="top_left_circle"></div>
+        <div class="bottom_left_circle"></div>
+    </div>
+    <div class="circle">
+        <div class="top_right_circle"></div>
+        <div class="bottom_right_circle"></div>
+    </div>
 </center>
 {% include "personal/includes/htmlsnippet.html" %}
 {% endblock %}
