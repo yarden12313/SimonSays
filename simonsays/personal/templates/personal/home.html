@@ -1,20 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .top_left_circle{
+            height: 100px;
+            width: 100px;
+            background: blue;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            }
+        .top_right_circle{
+            height: 100px;
+            width: 100px;
+            background: green;
+            border-top-left-radius: 0;
+            border-top-right-radius: 100%;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            }
+        .bottom_left_circle{
+            height: 100px;
+            width: 100px;
+            background: yellow;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 0;
+            }
+        .bottom_right_circle{
+            height: 100px;
+            width: 100px;
+            background: red;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 100%;
+            }
+    </style>
+</head>
+<body>
 {% extends "personal/header.html" %}
-
 {% block content %}
-<style>
-  .circle{
-     background: #f00;
-     width: 400px;
-     height: 400px;
-     border-radius: 50%;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     <!--$size: 45px;-->
-  }
-</style>
-
-<center><div class="circle">
-</div></center>
-
+<center>
+    <div class="top_left_circle"></div>
+    <div class="bottom_left_circle"></div>
+    <div class="top_right_circle"></div>
+    <div class="bottom_right_circle"></div>
+</center>
 {% include "personal/includes/htmlsnippet.html" %}
 {% endblock %}
+</body>
+</html>
