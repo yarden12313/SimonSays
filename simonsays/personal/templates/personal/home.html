@@ -44,10 +44,17 @@
             border-bottom-right-radius: 100%;
             margin:0;
             }
+        .circle_half_left{
+            position: absolute;
+        }
+        .circle_half_right{
+            position: absolute;
+            left: 100px;
+        }
         .circle{
-            display: inline-block;
-            margin:0;
-            padding: 0px 0px 0px 0px;
+        position: relative;
+        display:inline-block;
+        width: 200px;
         }
     </style>
 </head>
@@ -56,13 +63,15 @@
 {% block content %}
 <center>
     <div class="circle">
-        <div class="top_left_circle"></div>
-        <div class="bottom_left_circle"></div>
+    <div class="circle_half_left">
+        <div class="top_left_circle" title="blue"></div>
+        <div class="bottom_left_circle" title="yellow"></div>
     </div>
-    <div class="circle">
-        <div class="top_right_circle"></div>
-        <div class="bottom_right_circle"></div>
+    <div class="circle_half_right">
+        <div class="top_right_circle" title="green"></div>
+        <div class="bottom_right_circle" title="red"></div>
     </div>
+        </div>
 </center>
 {% include "personal/includes/htmlsnippet.html" %}
 {% endblock %}
